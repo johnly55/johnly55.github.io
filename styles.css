@@ -5,5 +5,8 @@ src: "assets/fonts/GrenzeGotisch-VariableFont_wght.ttf";
 
 header{
   background-color: #0ebec7;
-  font-family: cursive;
+}
+
+h1{
+  font-size: 200%;
 }
