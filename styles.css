@@ -1,7 +1,43 @@
-header{
-  background-color: #0ebec7;
+@font-face {
+font-family: personalized;
+src: url("assets/fonts/Aquire.otf");
 }
 
-h1{
-  font-size: 200%;
+*{
+  margin: 0px 5px 0px 5px
+}
+
+header{
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  background: url("assets/images/2d-space-background.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  font-family: personalized;
+  background-size: contain;
+}
+
+.overlay-parent{
+  margin: 30px auto 0px  ;
+  position: relative;
+  text-align: center;
+  width: 180px;
+  height: 180px;
+}
+
+.overlay-portrait{
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+  top: 0;
+  left: 0;
+}
+
+.overlay-cover{
+  position: absolute;
+  width: 105%;
+  height: 105%;
+  top: -20%;
+  left: -8%;
 }
