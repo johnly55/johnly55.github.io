@@ -7,6 +7,11 @@ src: url("assets/fonts/Aquire.otf");
   margin: 0px 5px 0px 5px
 }
 
+::selection{
+  color: none;
+  background: none;
+}
+
 header{
   border-radius: 10px;
   width: auto;
@@ -19,7 +24,7 @@ header{
 }
 
 .overlay-parent{
-  margin: 30px auto 0px  ;
+  margin: 10px auto 0px  ;
   position: relative;
   text-align: center;
   width: 180px;
@@ -39,5 +44,5 @@ header{
   width: 105%;
   height: 105%;
   top: -20%;
-  left: -8%;
+  left: -4%;
 }
