@@ -1,3 +1,10 @@
-body{
-  background-color: powderblue;
+@font-face {
+font-family: personalized;
+src: "assets/fonts/GrenzeGotisch-VariableFont_wght.ttf";
+}
+*{
+  font-family: personalized;
+}
+header{
+  background-color: #0ebec7;
 }
