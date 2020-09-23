@@ -1,22 +1,19 @@
-function floating(){
-  var elem = document.getElementsByClassName("overlay-parent")[0];
-  var pos = 0;
-  var id = setInterval(frame, 45);
-  var isFalling = false;
-  function frame(){
-    if(pos == 0){
-      pos++;
-      isFalling = false;
-    }else if(!isFalling){
-      pos++;
-      if(pos > 30){
-        isFalling = true;
-      }
-    }else if(isFalling){
-      pos--;
+function floatingHelmet() {
+  var obj = document.getElementsByClassName('overlay-parent')[0];
+  var posY = 0;
+  var isFalling = true;
+  var range = 25;
+  var intervals = setInterval(function() {
+    if (isFalling == true) {
+      posY--;
+    } else {
+      posY++;
     }
-    elem.style.top = pos + 'px';
-  }
+    if (posY > range || posY < 0 - range) {
+      isFalling = !isFalling;
+    }
+    obj.style.top = posY + "px";
+  }, 50);
 }
 
-floating();
+floatingHelmet();

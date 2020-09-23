@@ -1,18 +1,18 @@
 @font-face {
-font-family: personalized;
-src: url("assets/fonts/Aquire.otf");
+  font-family: personalized;
+  src: url("assets/fonts/Aquire.otf");
 }
 
-*{
+* {
   margin: 0px 5px 0px 5px
 }
 
-::selection{
+::selection {
   color: none;
   background: none;
 }
 
-header{
+header {
   border-radius: 10px;
   width: auto;
   height: auto;
@@ -23,15 +23,15 @@ header{
   background-size: contain;
 }
 
-.overlay-parent{
-  margin: 10px auto 0px  ;
+.overlay-parent {
+  margin: 10px auto 0px;
   position: relative;
   text-align: center;
   width: 180px;
   height: 180px;
 }
 
-.overlay-portrait{
+.overlay-portrait {
   border-radius: 50%;
   width: 80%;
   height: 80%;
@@ -39,7 +39,7 @@ header{
   left: 0;
 }
 
-.overlay-cover{
+.overlay-cover {
   position: absolute;
   width: 105%;
   height: 105%;
