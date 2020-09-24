@@ -1,18 +1,16 @@
-function floatingHelmet() {
-  var obj = document.getElementById('overlay-parent');
-  var posY = 0;
-  var isFalling = true;
-  var range = 25;
+function floatingObject(objID, floatRange = 20, offset = 0, startFalling = true, startingPosY = 0) {
+  var obj = document.getElementById(objID);
+  var posY = startingPosY;
   setInterval(function() {
-    if (isFalling == true) {
-      posY--;
-    } else {
+    if (startFalling == true) {
       posY++;
+    } else {
+      posY--;
     }
-    if (posY > range || posY < 0 - range) {
-      isFalling = !isFalling;
+    if (posY > floatRange || posY < 0 - floatRange) {
+      startFalling = !startFalling;
     }
-    obj.style.top = posY + "px";
+    obj.style.top = (posY + offset) + "px";
     chanceToStartRocket();
   }, 60);
 }
@@ -24,7 +22,7 @@ function chanceToStartRocket() {
     return;
   }
   var chance = Math.floor(Math.random() * 1000);
-  if (chance > 990) {
+  if (chance > 995) {
     rocketActive = true;
     movingRocket();
   }
@@ -55,5 +53,5 @@ function movingRocket() {
   document.getElementById('rocket-area').appendChild(rocket);
 }
 
-floatingHelmet();
+floatingObject('overlay-parent', 20, 48);
 movingRocket();

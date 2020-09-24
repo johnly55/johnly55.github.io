@@ -30,10 +30,12 @@ header {
 
 #overlay-parent {
   margin: 10px auto 0px;
-  position: relative;
+  position: absolute;
   text-align: center;
-  width: 180px;
-  height: 180px;
+  width: 100px;
+  height: 100px;
+  top: 35px;
+  left: 20px;
 }
 
 #overlay-portrait {
