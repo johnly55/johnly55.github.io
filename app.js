@@ -13,10 +13,21 @@ function floatingHelmet() {
       isFalling = !isFalling;
     }
     obj.style.top = posY + "px";
+    chanceToStartRocket();
   }, 50);
 }
 
-function chanceToStartRocket()
+var rocketActive = true;
+function chanceToStartRocket(){
+  if(rocketActive){
+    return;
+  }
+  var chance = Math.floor(Math.random() * 1000);
+  if(chance > 500){
+    rocketActive = true;
+    movingRocket();
+  }
+}
 
 function movingRocket(){
   var rocket = new Image();
@@ -27,7 +38,8 @@ function movingRocket(){
   rocket.style.transform = "rotate(105deg)"
   var thing = rocket.style.overlow;
 
-  var posX = 2000;
+  var posXVariety = Math.floor(Math.random() * 1000);
+  var posX = 2000 + posXVariety;
   var posY = -200;
   var intervals = setInterval(function(){
     posX -= 2;
@@ -36,6 +48,8 @@ function movingRocket(){
     rocket.style.right = posX + "px";
     if(posX < -100){
       clearInterval(intervals);
+      rocket.parentNode.removeChild(rocket);
+      rocketActive = false;
     }
   }, 5);
 
