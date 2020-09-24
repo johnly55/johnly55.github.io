@@ -23,7 +23,12 @@ header {
   background-size: contain;
 }
 
-.overlay-parent {
+.about-me h2 {
+  font-size: 200%;
+  font-family: personalized;
+}
+
+#overlay-parent {
   margin: 10px auto 0px;
   position: relative;
   text-align: center;
@@ -31,7 +36,7 @@ header {
   height: 180px;
 }
 
-.overlay-portrait {
+#overlay-portrait {
   border-radius: 50%;
   width: 80%;
   height: 80%;
@@ -39,7 +44,7 @@ header {
   left: 0;
 }
 
-.overlay-cover {
+#overlay-cover {
   position: absolute;
   width: 105%;
   height: 105%;
