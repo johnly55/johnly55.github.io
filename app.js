@@ -53,6 +53,28 @@ function movingRocket() {
   document.getElementById('rocket-area').appendChild(rocket);
 }
 
+function slideShow() {
+  var listOfSlideShows = document.getElementsByClassName('slideshows');
+  for (var i = 0; i < listOfSlideShows.length; i++) {
+    listOfSlideShows[i].children[0].style.display = "block";
+    listOfSlideShows[i].children[1].style.display = "none";
+  }
+  var index = false;
+  var intervals = setInterval(function() {
+    for (var i = 0; i < listOfSlideShows.length; i++) {
+      if (index == true) {
+        listOfSlideShows[i].children[0].style.display = "block";
+        listOfSlideShows[i].children[1].style.display = "none";
+      } else {
+        listOfSlideShows[i].children[0].style.display = "none";
+        listOfSlideShows[i].children[1].style.display = "block";
+      }
+    }
+    index = !index;
+  }, 2000);
+}
+
 floatingObject('overlay-parent', 20, 48);
 floatingObject('among-us-guy', 20, 0, false);
 movingRocket();
+slideShow();
