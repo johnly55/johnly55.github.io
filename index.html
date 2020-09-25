@@ -5,31 +5,110 @@
 	<meta charset="utf-8">
 	<title>John Ly's Profile</title>
 	<link rel="stylesheet" href="styles.css">
-	<link rel = "icon" type = "image/png" href = "assets/images/rotating-star.gif">
+	<link rel="icon" type="image/png" href="assets/images/rotating-star.gif">
 </head>
 
 <body>
-	<header>
+	<header id="home">
 		<div id="rocket-area" style="position:relative; overflow:hidden">
-			<div id="profile-intro" style="color:white" align="center">
-				<br>
-				<h6 style="font-size:30px">The Profile of</h6>
-				<h1 style="font-size:120px; line-height:80%">John Ly</h1>
-				<br><br>
+			<div id="profile-intro" align="center">
+				<h3>The Profile of</h3>
+				<h1 style="font-size:120px">John Ly</h1>
 			</div>
 			<nav id="overlay-parent">
-				<a href="https://www.linkedin.com/in/john-ly-" target="_blank"><img id="overlay-portrait"
-						src="https://media-exp1.licdn.com/dms/image/C4E35AQGZDVkptCEDag/profile-framedphoto-shrink_200_200/0?e=1600966800&v=beta&t=usmntHrAcDsKQGcJ6SxmNvjsUgn4Z97Ma9E2evm_6mg" alt="John Ly's Picture">
-					<img src="assets\images\transparent-astronaut-helmet.png" alt="" id="overlay-cover">
+				<a href="https://www.linkedin.com/in/john-ly-" target="_blank">
+					<img id="overlay-portrait" src="assets/images/my-pic.jpg" alt="John Ly's Picture">
+					<img id="overlay-cover" src="assets\images\transparent-astronaut-helmet.png">
+				</a>
+			</nav>
+			<nav>
+				<a href="#projects">
+					<img id="among-us-guy" src="assets/images/impostor.webp">
 				</a>
 			</nav>
 		</div>
 	</header>
-	<section class="about-me">
-		<div>
-			<h2>Who Am I?</h2>
-		</div>
+	<nav id="navigation-bar">
+		<ul>
+			<li><a href="#home">Home</a>
+			<li><a href="#about-me">About Me</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#footer">Contact</a></li>
+			<li><a href="https://github.com/johnly55/johnly55" target="_blank">Git Hub</a></li>
+		</ul>
+	</nav>
+	<br>
+	<section id="about-me">
+		<table>
+			<tr class="row">
+				<td class="column-first">
+					<div>
+						<h2 style="font-size: 60px">Who Am I?</h2>
+					</div>
+				</td>
+				<td class="column-second">
+					<div>
+						<article>
+							<p>Welcome to my Gihub Profile. This is where all my programming
+								projects can be seen on full display.</p>
+							<p>I'm John! I've served in the Air Force for 4 years but realized it wasn't for me.
+								Now I'm pursuing my real interest, and that is coding!</p>
+						</article>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<table>
+			<tr class="row">
+				<td class="column-second">
+					<div class="inline-holder">
+						<img class="inline-images" src="assets/images/python.png">
+						<img class="inline-images" src="assets/images/c-sharp.png">
+						<img class="inline-images" src="assets/images/sql.png">
+						<img class="inline-images" src="assets/images/trinity.png" style="height:25%; width:25%">
+					</div>
+				</td>
+				<td class="column-first">
+					<div>
+						<h2 style="font-size: 60px; line-height:80%">My Skillset</h2>
+						<h3 style="line-height:60%">(And Growing!)</h3>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<table>
+			<tr class="row">
+				<td class="column-first">
+					<div>
+						<h2 style="font-size: 60px">How Did I Start?</h2>
+					</div>
+				</td>
+				<td class="column-second">
+					<div>
+						<article>
+							<p>I always loved video games growing up. One game in particular was Minecraft.
+								I got interested in the game and the mods I could install untill I eventually wanted
+								to create my own. I made a mod that added a set of weapons with special abilities into the game.
+								That was only the start, from then, I worked on some unity projects and other side projects as well.</p>
+						</article>
+					</div>
+				</td>
+			</tr>
+		</table>
 	</section>
+	<section id="projects">
+		<h1>Put Projects Here</h1>
+	</section>
+	<footer id="footer">
+		<div id="footer-spacing">
+			<h3>Connect With Me</h3>
+			<a class="inline-holder" href="https://www.linkedin.com/in/john-ly-" target="_blank">
+				<img class="inline-images" src="assets/images/linkedin-logo.png" alt="linkedin prifile">
+			</a>
+			<hr>
+			<p>Created By: John Ly</p>
+		</div>
+	</footer>
 	<script src="app.js"></script>
 </body>
 

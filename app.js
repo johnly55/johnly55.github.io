@@ -54,4 +54,5 @@ function movingRocket() {
 }
 
 floatingObject('overlay-parent', 20, 48);
+floatingObject('among-us-guy', 20, 0, false);
 movingRocket();
