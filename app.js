@@ -28,29 +28,38 @@ function chanceToStartRocket() {
   }
 }
 
+var rocketTick = 20;
+var countDownSeconds = 3;
+var tickCountDown = countDownSeconds / (rocketTick / 1000);
+
 function movingRocket() {
-  var rocket = new Image();
+  var rocketArea = document.getElementById('rocket-area');
+  var rocket = new Image(50, 80);
   rocket.src = "assets/images/rocket.png";
-  rocket.style.length = "50px";
-  rocket.style.width = "50px";
   rocket.style.position = "absolute";
   rocket.style.transform = "rotate(105deg)"
 
-  var posXVariety = Math.floor(Math.random() * 1000) - 400;
-  var posX = 0 + posXVariety;
+  var posRandomizer = Math.floor(Math.random() * rocketArea.offsetWidth) - 600;
+  var posX = 0 + posRandomizer;
   var posY = -100;
   var intervals = setInterval(function() {
+    if (tickCountDown > 0) {
+      tickCountDown--;
+      return;
+    }
     posX += 10;
     posY += 2.5;
     rocket.style.top = posY + "px";
     rocket.style.left = posX + "px";
-    if (posX > 1400 && posY > 300) {
+    if (posX > rocketArea.offsetWidth + 100 && posY > rocketArea.offsetHeight + 50) {
       clearInterval(intervals);
       rocket.parentNode.removeChild(rocket);
       rocketActive = false;
+      countDownSeconds = 1.5;
+      tickCountDown = countDownSeconds / (rocketTick / 1000);
     }
-  }, 30);
-  document.getElementById('rocket-area').appendChild(rocket);
+  }, rocketTick);
+  rocketArea.appendChild(rocket);
 }
 
 function slideShow() {
@@ -124,5 +133,6 @@ function navigationBar() {
 
 floatingObject('overlay-parent', 20, 48);
 floatingObject('among-us-guy', 20, 0, false);
-movingRocket(); //TODO: select based off screen width
+movingRocket();
 slideShow();
+//TODO: Add a filter for projects seen

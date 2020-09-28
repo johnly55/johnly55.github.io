@@ -235,9 +235,14 @@ article p {
   padding: 15px 0px 5px 0px;
 }
 
-#icons-holder{
+#icons-table{
+  margin: auto auto;
+}
+
+.icons-holder{
   position: relative;
   padding: 40px 0px;
+  width: 80px;
 }
 
 .icons{
@@ -245,4 +250,5 @@ article p {
   height: 80px;
   position: absolute;
   top: 0px;
+  left: 0px;
 }
