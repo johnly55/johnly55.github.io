@@ -164,25 +164,26 @@ article p {
   padding: 5px 0px 100px;
 }
 
-#projects-holder {
-  table-layout: fixed;
-  margin: auto auto;
-  border-spacing: 150px 60px;
-  width: 100%;
-  height: auto;
+#projects-holder tr{
+  display: flex;
+  margin: 0px 60px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 
 .project {
+  margin-bottom: 50px;
   border: 2px solid black;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 10px 10px 10px 10px;
-  border: 3px solid black;
+  width: 500px;
 }
 
 .project-header {
   text-align: center;
   font-family: personalized;
-  line-height: 100%;
+  line-height: 80%;
 }
 
 .project-body{
@@ -204,7 +205,6 @@ article p {
 .project-body img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px 10px 10px 10px;
 }
 
 #footer {
