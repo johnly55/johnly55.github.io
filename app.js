@@ -74,7 +74,55 @@ function slideShow() {
   }, 2000);
 }
 
+function iconJump(icon) {
+  var maxJump = 6;
+  var speed = 2;
+  var jumpPos = 0;
+
+  var mode = -1;
+  if (mode == -1) {
+    mode = 0;
+    var intervals = setInterval(function() {
+      switch (mode) {
+        case 0:
+          jumpPos = jumpPos + 1 * speed;
+          icon.style.top = -jumpPos + "px";
+          if (jumpPos >= maxJump)
+            mode = 1;
+          break;
+        case 1:
+          jumpPos = jumpPos - 1 * speed;
+          icon.style.top = -jumpPos + "px";
+          if (jumpPos <= 0) {
+            mode = 2;
+            icon.style.top = 0 + "px";
+          }
+          break;
+        case 2:
+          clearInterval(intervals);
+      }
+    }, 20);
+  }
+}
+
+window.onscroll = function() {
+  navigationBar()
+};
+
+var navbar = document.getElementById("navigation-bar");
+var sticky = navbar.offsetTop;
+
+function navigationBar() {
+  if (window.pageYOffset >= sticky) {
+    if (!navbar.classList.contains("sticky"))
+      navbar.classList.add("sticky");
+  } else {
+    if (navbar.classList.contains("sticky"))
+      navbar.classList.remove("sticky");
+  }
+}
+
 floatingObject('overlay-parent', 20, 48);
 floatingObject('among-us-guy', 20, 0, false);
-movingRocket();
+movingRocket(); //TODO: select based off screen width
 slideShow();

@@ -19,12 +19,6 @@ header {
   background-size: contain;
 }
 
-article p {
-  font-family: personalized;
-  font-size: 25px;
-  text-align: center;
-}
-
 #profile-intro {
   line-height: 4px;
   font-size: 28px;
@@ -35,10 +29,30 @@ article p {
     margin: 10px 0px 40px;
 }
 
-#about-me h2 {
-  font-size: 200%;
+#about-me h2{
+  font-size: 80px;
+  line-height:80%;
   font-family: personalized;
-  margin: 0px 0px;
+}
+
+article p {
+  font-family: personalized;
+  font-size: 35px;
+  text-align: center;
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 99.15%;
+}
+
+#about-me{
+  padding-top:16px;
+}
+
+.sticky + #about-me{
+  padding-top: 60px;
 }
 
 #navigation-bar ul {
@@ -46,7 +60,7 @@ article p {
   list-style-type: none;
   background-color: #363534;
   border-radius: 0px 0px 10px 10px;
-  border: 1px solid white;
+  border: 2px solid black;
   margin: 0px;
   padding: 0px;
 }
@@ -59,9 +73,10 @@ article p {
 }
 
 #navigation-bar li:last-child {
-  border: 2px solid black;
   border-radius: 0px 0px 10px 0px;
   float: right;
+  border-right: none;
+  border-left: 1px solid black;
   background-color: #30964c;
 }
 
@@ -93,12 +108,7 @@ article p {
   color: white;
   border-radius: 10px 10px 10px 10px;
   text-align: center;
-  padding: 5px;
-}
-
-#about-me h2{
-  font-size: 80px;
-  line-height:80%;
+  padding: 50px 10px;
 }
 
 .column-second {
@@ -106,10 +116,10 @@ article p {
   border-radius: 10px 10px 10px 10px;
   text-align: center;
   height: inherit;
-  padding: 5px;
+  padding: 50px 30px;
 }
 
-.inline-holder {
+#inline-holder {
   width: 100%;
   height: 100%;
 }
@@ -173,7 +183,7 @@ article p {
 }
 
 .project {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   border: 2px solid black;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 10px 10px 10px 10px;
@@ -184,6 +194,7 @@ article p {
   text-align: center;
   font-family: personalized;
   line-height: 80%;
+  font-size: 30px;
 }
 
 .project-body{
@@ -196,9 +207,11 @@ article p {
 
 .project-footer {
   text-align: center;
-  line-height: 16px;
+  padding: 10px;
+  line-height: 100%;
   font-weight: bold;
-  height: 300px;
+  font-size: 24px;
+  height: 350px;
   overflow: auto;
 }
 
@@ -220,4 +233,16 @@ article p {
   width: 40%;
   margin: 0px auto;
   padding: 15px 0px 5px 0px;
+}
+
+#icons-holder{
+  position: relative;
+  padding: 40px 0px;
+}
+
+.icons{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0px;
 }
