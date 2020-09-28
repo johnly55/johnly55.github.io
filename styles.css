@@ -59,9 +59,10 @@ article p {
 }
 
 #navigation-bar li:last-child {
-  border-right: none;
-  border-left: 1px solid #bbb;
+  border: 2px solid black;
+  border-radius: 0px 0px 10px 0px;
   float: right;
+  background-color: #30964c;
 }
 
 #navigation-bar a {
@@ -106,14 +107,6 @@ article p {
   text-align: center;
   height: inherit;
   padding: 5px;
-}
-
-.row::after {
-  /*
-  content: "";
-  display: table;
-  clear: both;
-  */
 }
 
 .inline-holder {
@@ -172,27 +165,29 @@ article p {
 }
 
 #projects-holder {
+  table-layout: fixed;
   margin: auto auto;
   border-spacing: 150px 60px;
+  width: 100%;
+  height: auto;
 }
 
 .project {
   border: 2px solid black;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px 10px 10px 10px;
-  width: 300px;
-  height: auto;
+  border: 3px solid black;
 }
 
 .project-header {
   text-align: center;
   font-family: personalized;
-  line-height: 10px;
+  line-height: 100%;
 }
 
 .project-body{
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 350px;
   border: 1px solid black;
   border-radius: 10px 10px 10px 10px;
   overflow: hidden;
@@ -202,13 +197,14 @@ article p {
   text-align: center;
   line-height: 16px;
   font-weight: bold;
-  height: 200px;
+  height: 300px;
   overflow: auto;
 }
 
 .project-body img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px 10px 10px 10px;
 }
 
 #footer {
