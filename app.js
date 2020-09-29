@@ -136,3 +136,6 @@ floatingObject('among-us-guy', 20, 0, false);
 movingRocket();
 slideShow();
 //TODO: Add a filter for projects seen
+//TODO: Change Navigation Bar Color as you scroll
+//TODO: Adjust Navigation Bar Size to screen
+//TODO: Adjust ratios in about me section
