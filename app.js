@@ -139,3 +139,4 @@ slideShow();
 //TODO: Change Navigation Bar Color as you scroll
 //TODO: Adjust Navigation Bar Size to screen
 //TODO: Adjust ratios in about me section
+//TODO: Add directions to games
