@@ -47,7 +47,7 @@ function movingRocket() {
       tickCountDown--;
       return;
     }
-    posX += 10;
+    posX += 11;
     posY += 2.5;
     rocket.style.top = posY + "px";
     rocket.style.left = posX + "px";
