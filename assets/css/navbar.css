@@ -1,0 +1,40 @@
+#navbar {
+    height: var(--navbar-height);
+    background-color: var(--navbar-bg);
+    position: sticky;
+    top: 0px;
+    color: white;
+    font-size: var(--font-size-lg);
+    margin: 0px;
+    box-shadow: 0px 0px 3px 1px black;
+}
+
+#navbar a {
+    max-height: calc(var(--navbar-height) - 10px);
+    display: inline-block;
+    margin: 5px;
+    vertical-align: top;
+    text-decoration: none;
+
+}
+
+#navbar a img {
+    max-height: inherit;
+}
+
+#navbar ul {
+    height: 100%;    
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+}
+
+#navbar ul li {
+    display: inline-block;
+    margin: calc(var(--navbar-height)/2) 5px 0px 5px;
+    padding-right: 15px;
+}
+
+#navbar ul li:nth-child(-n+2){
+    border-right: 1px solid black;
+}
