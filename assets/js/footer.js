@@ -1,3 +1,4 @@
+/**Enum for the Icon states.*/
 const Icon = Object.freeze({
   READY: 1,
   JUMPING: 2,
@@ -5,13 +6,15 @@ const Icon = Object.freeze({
   FINISHED: 4
 });
 
+const jumpHeight = 3;
+const speed = 1;
+const tickSpeed = 30;
 /**
  * Used with onmouseover to allow this footer icon to briefly jump.
  * @param {*} icon html img element.
+ * @returns {void}
  */
 function iconJump(icon) {
-	let maxJump = 3;
-	let speed = 1;
 	let jumpPos = 0;
 
 	let mode = Icon.READY;
@@ -22,7 +25,7 @@ function iconJump(icon) {
 				case Icon.JUMPING:
 					jumpPos = jumpPos + 1 * speed;
 					icon.style.top = -jumpPos + "px";
-					if (jumpPos >= maxJump)
+					if (jumpPos >= jumpHeight)
 						mode = Icon.FALLING;
 					break;
 				case Icon.FALLING:
@@ -37,6 +40,6 @@ function iconJump(icon) {
 					clearInterval(intervals);
 					break;
 			}
-		}, 30);
+		}, tickSpeed);
 	}
 }

@@ -7,46 +7,51 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/navbar.css">
 	<link rel="stylesheet" href="assets/css/footer.css">
-</head>
+	<link rel="shortcut icon" href="assets/images/icon-github.png" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /></head>
 <body>
 	<nav id="navbar">
-		<a href="https://github.com/johnly55">
+		<a href="https://github.com/johnly55" target="_blank">
 			<img src="assets/images/icon-github.png" alt="github link">
 		</a>
-		<ul>
-			<li><a href="#about-me">About Me</a></li>
-			<li>Projects</li>
-			<li>Links</li>
-		</ul>
+		<span>
+			<ul>
+				<li><a href="#about-me">About Me</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#footer">Links</a></li>
+			</ul>
+		</span>
+		<nav id="return-nav" class="invisible">
+			<a href="#">
+				<span class="material-symbols-outlined">
+					arrow_upward
+				</span>
+			</a>
+		</nav>
 	</nav>
 	<div id="intro-bg">
 		<div id="intro-bg-mask"></div>
 		<img id="intro-bg-img" src="assets/images/intro-background.jpg" alt="">
 		<span>Reaching For the Stars</span>
 	</div>
-	<div id="about-me">
+	<section id="about-me">
 		<h1>About me</h1>
 		<span style="font-size: 48px;">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 			Neque convallis a cras semper auctor. Ullamcorper sit amet risus nullam eget felis eget. Turpis egestas integer eget aliquet nibh praesent tristique magna sit. 
 			Volutpat commodo sed egestas egestas fringilla phasellus. Id consectetur purus ut faucibus pulvinar elementum. Faucibus ornare suspendisse sed nisi lacus sed viverra. 
 			Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Enim ut sem viverra aliquet. Nunc sed velit dignissim sodales ut eu sem integer. 
-			In ornare quam viverra orci sagittis eu volutpat odio facilisis. Sem fringilla ut morbi tincidunt augue interdum velit euismod in. 
-			Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Est pellentesque elit ullamcorper dignissim cras. Donec et odio pellentesque diam volutpat commodo sed egestas. Malesuada bibendum arcu vitae elementum curabitur vitae. Sit amet venenatis urna cursus eget nunc.
-			Nibh nisl condimentum id venenatis a condimentum vitae sapien pellentesque. Laoreet id donec ultrices tincidunt arcu non sodales. 
-			Elementum sagittis vitae et leo. Justo donec enim diam vulputate ut. Aenean sed adipiscing diam donec adipiscing. Ut lectus arcu bibendum at varius vel pharetra. 
-			Velit egestas dui id ornare arcu odio. Orci dapibus ultrices in iaculis nunc sed augue. Placerat in egestas erat imperdiet sed euismod nisi porta lorem. 
-			Aliquam vestibulum morbi blandit cursus risus at. Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci. Proin fermentum leo vel orci. 
-			Ultrices tincidunt arcu non sodales neque sodales ut etiam.
-			Pharetra pharetra massa massa ultricies mi quis. Vitae purus faucibus ornare suspendisse sed. Nulla at volutpat diam ut venenatis. 
-			Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt. Leo urna molestie at elementum eu. Quis vel eros donec ac odio. 
-			Facilisis mauris sit amet massa vitae. Tincidunt tortor aliquam nulla facilisi cras fermentum odio eu feugiat. Massa massa ultricies mi quis hendrerit dolor magna eget. 
-			Nunc faucibus a pellentesque sit amet porttitor. Id donec ultrices tincidunt arcu non sodales neque sodales ut. Eget magna fermentum iaculis eu non diam phasellus. 
-			Sit amet consectetur adipiscing elit ut. Elit sed vulputate mi sit amet mauris commodo quis imperdiet. 
-			Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Tincidunt id aliquet risus feugiat in ante metus. Netus et malesuada fames ac turpis. 
-			Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla.
 		</span>
-	</div>
+	</section>
+	<section id="projects">
+		<h1>Projects</h1>
+		<span style="font-size: 48px;">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			Neque convallis a cras semper auctor. Ullamcorper sit amet risus nullam eget felis eget. Turpis egestas integer eget aliquet nibh praesent tristique magna sit. 
+			Volutpat commodo sed egestas egestas fringilla phasellus. Id consectetur purus ut faucibus pulvinar elementum. Faucibus ornare suspendisse sed nisi lacus sed viverra. 
+			Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Enim ut sem viverra aliquet. Nunc sed velit dignissim sodales ut eu sem integer. 
+		</span>
+	</section>
 	<footer id="footer">
 		<h3>Connect With Me</h3>
 		<div id="footer-icon-holder">
@@ -62,6 +67,7 @@
 		<br>
 	</footer>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/navbar.js"></script>
 	<script src="assets/js/footer.js"></script>
 </body>
 </html>

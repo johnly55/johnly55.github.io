@@ -10,13 +10,20 @@
     --navbar-bg: rgb(58, 58, 58);
 }
 
-html, body {
+html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
+    height: 100%;
     padding: 0px;
     margin: 0px;
+}
+
+section {
+    background-color: white;
+    padding: 10px 120px;
 }
 
 h1 {
@@ -29,7 +36,7 @@ h3 {
 
 #intro-bg {
     width: 100%;
-    height: calc(100% - var(--navbar-height));
+    height: 100%;
     position: relative;
     overflow: hidden;
     z-index: -1;
@@ -66,10 +73,10 @@ h3 {
     user-select: none;
 }
 
-#about-me {
-    background-color: white;
-    overflow: hidden;
-    padding: 10px 120px;
+.invisible {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.25s;
 }
 
 @media screen and (max-width: 720px){
