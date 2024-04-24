@@ -36,4 +36,5 @@
 
 #footer span {
     padding: 5px;
+    font-size: var(--font-size-sm-md);
 }

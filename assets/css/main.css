@@ -1,6 +1,7 @@
 :root {
     font-size: 62.5%;
     --font-size-sm: 0.8rem;
+    --font-size-sm-md: 1.2rem;
     --font-size-md: 1.6rem;
     --font-size-lg: 2.0rem;
     --font-size-xl: 3.0rem;
@@ -8,6 +9,11 @@
 
     --navbar-height: 65px;
     --navbar-bg: rgb(58, 58, 58);
+
+    --project-width: 400px;
+    --project-height: 900px;
+    --project-image-height: 300px;
+    --project-image-height-padding: 10px;
 }
 
 html {
@@ -19,11 +25,16 @@ body {
     height: 100%;
     padding: 0px;
     margin: 0px;
+    font-size: var(--font-size-md);
 }
 
 section {
     background-color: white;
-    padding: 10px 120px;
+    font-size: var(--font-size-lg);
+}
+
+article {
+    padding: 20px 130px;
 }
 
 h1 {
@@ -34,43 +45,131 @@ h3 {
     font-size: var(--font-size-md);
 }
 
-#intro-bg {
+.parallax {
     width: 100%;
     height: 100%;
-    position: relative;
     overflow: hidden;
-    z-index: -1;
+    position: relative;
+    user-select: none;
 }
 
-#intro-bg-mask {
+.parallax-bg {
     position: absolute;
     width: 100%;
     height: 100%;
+    background-image: url();
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.parallax .mask {
     background-color: rgb(26, 28, 58);
+    position: absolute;
+    width: 100%;
+    height: 100%;
     opacity: 0.6;
     user-select: none;
 }
 
-#intro-bg-img {
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
-    object-position: center;
-    z-index: -2;
-    position: fixed;
-    filter: blur(6px);
-    user-select: none;
-}
-
-#intro-bg span {
+.parallax span.caption {
     color: white;
     position: absolute;
     top: 50%;
-    left: calc(50% - 340px);
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 8.0rem;
+    font-size: 4.0rem;
     text-shadow: 0px 0px 3px black;
     user-select: none;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px black;
+    padding: 40px;
+}
+
+.caption-lg {
+    font-size: 8.0rem !important;
+}
+
+.blur {
+    filter: blur(6px);
+}
+
+#about-me article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#about-me article img {
+    width: 200px;
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 1px black;
+}
+
+#about-me article > div {
+    min-width: 220px;
+}
+
+#project-group-container {
+    display: flex;
+    width: 100%;
+    padding: 20px 120px;
+    overflow-anchor: auto;
+}
+
+#project-group-container .project {
+    height: var(--project-height);
+    width: var(--project-width);
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.project .image-list {
+    width: 100%;
+    overflow: hidden;
+    padding: var(--project-image-height-padding) 0px;
+}
+
+.project .image-list img {
+    width: 100%;
+    height: var(--project-image-height);
+    object-position: center;
+    object-fit: cover;
+}
+
+.project .info-list {
+    box-shadow: 0px 0px 3px 0px black;
+    width: 100%;
+    height: calc(var(--project-info-height) - var(--project-image-height-padding) - var(--project-image-height));
+    overflow: hidden;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col-4 {
+    width: 33.3%;
+}
+
+.col-5 {
+    width: 41.6%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.3%;
+}
+
+.col-8 {
+    width: 66.6%;
 }
 
 .invisible {
@@ -79,10 +178,35 @@ h3 {
     transition: 0.25s;
 }
 
-@media screen and (max-width: 720px){
-    #intro-bg span {
-        left: 0px;
-        font-size: 6.0rem;
-        padding: 50px;
+.hidden {
+    display: none;
+}
+
+/* Google icon settings. */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+@media screen and (max-width: 768px){
+    #about-me article > div {
+        width: 100%;
+    }
+
+    #about-me article img {
+        margin: 50px auto;
+    }
+
+    .parallax span.caption {
+        font-size: 3.0rem;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    article {
+        padding: 20px 20px;
     }
 }

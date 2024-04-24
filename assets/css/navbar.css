@@ -11,6 +11,7 @@
     margin: 0px;
     box-shadow: 0px 0px 3px 1px black;
     width: 100%;
+    z-index: 1;
 }
 
 #navbar > a {
@@ -76,13 +77,4 @@
 #return-nav a span {
     margin: auto;
     font-size: 50px;
-}
-
-/* Google icon settings. */
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 200,
-    'GRAD' 0,
-    'opsz' 24
 }
