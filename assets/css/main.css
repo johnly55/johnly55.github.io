@@ -11,9 +11,9 @@
     --navbar-bg: rgb(58, 58, 58);
 
     --project-width: 400px;
-    --project-height: 900px;
     --project-image-height: 300px;
     --project-image-height-padding: 10px;
+    --project-description-height: 300px;
 }
 
 html {
@@ -45,57 +45,6 @@ h3 {
     font-size: var(--font-size-md);
 }
 
-.parallax {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    user-select: none;
-}
-
-.parallax-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url();
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.parallax .mask {
-    background-color: rgb(26, 28, 58);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.6;
-    user-select: none;
-}
-
-.parallax span.caption {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 4.0rem;
-    text-shadow: 0px 0px 3px black;
-    user-select: none;
-    border-radius: 100px;
-    background-color: rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 10px black;
-    padding: 40px;
-}
-
-.caption-lg {
-    font-size: 8.0rem !important;
-}
-
-.blur {
-    filter: blur(6px);
-}
-
 #about-me article {
     display: flex;
     flex-wrap: wrap;
@@ -115,71 +64,70 @@ h3 {
 
 #project-group-container {
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
     padding: 20px 120px;
-    overflow-anchor: auto;
+    justify-content: center;
 }
 
 #project-group-container .project {
-    height: var(--project-height);
     width: var(--project-width);
     overflow: hidden;
     box-sizing: border-box;
-    padding: 5px;
 }
 
 .project .image-list {
     width: 100%;
     overflow: hidden;
-    padding: var(--project-image-height-padding) 0px;
+    margin: var(--project-image-height-padding) 0px;
+}
+
+.project .image-list > div {
+    width: 100%;
+    height: var(--project-image-height);
+    box-sizing: border-box;
+    position: relative;
 }
 
 .project .image-list img {
-    width: 100%;
-    height: var(--project-image-height);
+    width: 97%;
+    height: 97%;
     object-position: center;
     object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 1px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .project .info-list {
-    box-shadow: 0px 0px 3px 0px black;
     width: 100%;
-    height: calc(var(--project-info-height) - var(--project-image-height-padding) - var(--project-image-height));
-    overflow: hidden;
+    font-size: var(--font-size-md);
+    position: relative;
 }
 
-.col-12 {
-    width: 100%;
+.project .info-list .title{
+    text-align: center;
+    margin: 10px 0px 18px;
+    font-weight: bold;
 }
 
-.col-4 {
-    width: 33.3%;
+.project .info-list .tags{
+    margin: 15px 0px;
 }
 
-.col-5 {
-    width: 41.6%;
+.project .info-list .description {
+    box-shadow: 0px 0px 1px black;
+    padding: 10px;
+    margin: 3px;
+    line-height: 150%;
+    height: var(--project-description-height);
+    overflow: auto;
 }
 
-.col-6 {
-    width: 50%;
-}
-
-.col-7 {
-    width: 58.3%;
-}
-
-.col-8 {
-    width: 66.6%;
-}
-
-.invisible {
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.25s;
-}
-
-.hidden {
-    display: none;
+.project .info-list .link a {
+    color: inherit;
 }
 
 /* Google icon settings. */
@@ -188,7 +136,9 @@ h3 {
     'FILL' 0,
     'wght' 200,
     'GRAD' 0,
-    'opsz' 24
+    'opsz' 24;
+    font-size: 50px !important;
+    vertical-align: middle !important;
 }
 
 @media screen and (max-width: 768px){
@@ -206,7 +156,7 @@ h3 {
 }
 
 @media screen and (max-width: 1024px){
-    article {
+    article, #project-group-container {
         padding: 20px 20px;
     }
 }
