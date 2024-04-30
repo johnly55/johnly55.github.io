@@ -1,5 +1,4 @@
 // Load projects based on json file and html template.
-
 const projectGroupContainer = document.getElementById('project-group-container');
 const projectTemplate = document.querySelector('.project')
 
@@ -11,8 +10,19 @@ function appendProjects(projectJson) {
         let title = projectHTML.querySelector('.title span');
         title.innerHTML = dict['title'];
 
-        let tags = projectHTML.querySelector('.tags span');
-        tags.innerHTML = dict['tags'];
+        // Surround tags with a span of class tag.
+        let tags = projectHTML.querySelector('.tags');
+        tags.innerHTML = '';
+        dict['tags'].forEach(tag => {
+            let span = document.createElement('span');
+            span.innerText = tag;
+            if(tag === 'c#')
+                // c# causes troubles as a variable name.
+                span.classList.add('tag', 'csharp' ,'unselected');
+            else
+                span.classList.add('tag', tag, 'unselected');
+            tags.append(span);
+        });
 
         let link = projectHTML.querySelector('.link a');
         link.href = dict['link'];
@@ -42,7 +52,7 @@ function appendProjects(projectJson) {
                 count += 1;
             }
             else {
-                div.classList.add('invisible', 'hidden');
+                div.classList.add('hidden');
             }
         });
 
@@ -133,7 +143,7 @@ var projectJson = {
                 "c#"
             ],
             "description": [
-                "Controls:WASD(Move); Space(Jump); Mouse(Look)",
+                "Controls:WASD(Move) Space(Jump) Mouse(Look)",
                 "Have a look at portals work in a game engine.",
                 "This is not a game, but more of an experiment for educational purposes."
             ],

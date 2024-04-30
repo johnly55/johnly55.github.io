@@ -10,10 +10,17 @@
     --navbar-height: 65px;
     --navbar-bg: rgb(58, 58, 58);
 
-    --project-width: 400px;
+    --project-width: 450px;
     --project-image-height: 300px;
     --project-image-height-padding: 10px;
-    --project-description-height: 300px;
+    --project-description-height: 250px;
+
+    --html-color: rgb(216, 48, 48);
+    --css-color: rgb(98, 155, 230);
+    --javascript-color: rgb(248, 124, 22);
+    --csharp-color: rgb(22, 50, 175);
+    --python-color: rgb(108, 190, 15);
+    --java-color: rgb(219, 28, 133)
 }
 
 html {
@@ -67,6 +74,7 @@ h3 {
     flex-wrap: wrap;
     padding: 20px 120px;
     justify-content: center;
+    gap: 10px 30px;
 }
 
 #project-group-container .project {
@@ -92,7 +100,7 @@ h3 {
     width: 97%;
     height: 97%;
     object-position: center;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 10px;
     box-shadow: 0px 0px 3px 1px black;
     position: absolute;
@@ -130,6 +138,79 @@ h3 {
     color: inherit;
 }
 
+.tag {
+    box-shadow: 0px 0px 1px black;
+    border-radius: 10px;
+    padding: 4px 8px;
+    margin: 3px;
+    text-shadow: 0px 0px 0px black;
+}
+
+.tag.html {
+    color: var(--html-color);
+    background-color: var(--html-color);
+    box-shadow: 0px 0px 1px var(--html-color);
+}
+
+.tag.css {
+    color: var(--css-color);
+    background-color: var(--css-color);
+    box-shadow: 0px 0px 1px var(--css-color);
+}
+
+.tag.javascript {
+    color: var(--javascript-color);
+    background-color: var(--javascript-color);
+    box-shadow: 0px 0px 1px var(--javascript-color);
+}
+
+.tag.csharp {
+    color: var(--csharp-color);
+    background-color: var(--csharp-color);
+    box-shadow: 0px 0px 1px var(--csharp-color);
+}
+
+.tag.python {
+    color: var(--python-color);
+    background-color: var(--python-color);
+    box-shadow: 0px 0px 1px var(--python-color);
+}
+
+.tag.java {
+    color: var(--java-color);
+    background-color: var(--java-color);
+    box-shadow: 0px 0px 1px var(--java-color);
+}
+
+#project-filter {
+    margin: 10px 0px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 1px;
+    align-items: center;
+    box-shadow: 0px 0px 1px black;
+    justify-content: center;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#project-filter .tag {
+    user-select: none;
+}
+
+#project-filter .tag:hover {
+    cursor: pointer;
+}
+
+.tag.unselected {
+    background-color: white !important;
+}
+
+.tag.selected {
+    color: white !important;
+}
+
 /* Google icon settings. */
 .material-symbols-outlined {
     font-variation-settings:
@@ -151,7 +232,11 @@ h3 {
     }
 
     .parallax span.caption {
-        font-size: 3.0rem;
+        font-size: 3.0rem !important;
+    }
+
+    .parallax span.caption-lg {
+        font-size: 8.0rem !important;
     }
 }
 
