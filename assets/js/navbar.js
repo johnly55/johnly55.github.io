@@ -12,8 +12,6 @@ document.addEventListener('scroll', (event) => {
     if(window.scrollY + navHeight > window.innerHeight){
         navbarEl.classList.add('navbar-shrink');
         returnNavEl.classList.remove('invisible');
-        returnNavEl.style.top = (window.outerHeight - returnNavSize - offsetHeight) + "px";
-        returnNavEl.style.left = (window.innerWidth - returnNavSize - offsetWidth) + "px";
     }
     else{
         navbarEl.classList.remove('navbar-shrink');

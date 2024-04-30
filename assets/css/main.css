@@ -284,11 +284,15 @@ h3 {
     }
 
     .parallax span.caption {
-        font-size: 3.0rem !important;
+        font-size: 2.5rem !important;
     }
 
     .parallax span.caption-lg {
-        font-size: 8.0rem !important;
+        font-size: 6.0rem !important;
+    }
+
+    #navbar span ul li a{
+        font-size: calc(var(--font-size-lg) - 0.6rem);
     }
 }
 
