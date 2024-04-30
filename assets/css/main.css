@@ -12,7 +12,7 @@
 
     --project-width: 450px;
     --project-image-height: 300px;
-    --project-image-height-padding: 10px;
+    --project-image-height-padding: 30px;
     --project-description-height: 250px;
 
     --html-color: rgb(216, 48, 48);
@@ -85,15 +85,16 @@ h3 {
 
 .project .image-list {
     width: 100%;
-    overflow: hidden;
     margin: var(--project-image-height-padding) 0px;
+    position: relative;
+    height: var(--project-image-height);
 }
 
 .project .image-list > div {
     width: 100%;
-    height: var(--project-image-height);
+    height: 100%;
     box-sizing: border-box;
-    position: relative;
+    position: absolute;
 }
 
 .project .image-list img {
@@ -209,6 +210,57 @@ h3 {
 
 .tag.selected {
     color: white !important;
+}
+
+.image-left-arrow span::after{
+    content: "chevron_left";
+}
+
+.image-right-arrow span::after {
+    content: "chevron_right";
+}
+
+.image-left-arrow{
+    position: absolute;
+    top: 140px;
+    left: 10px;
+}
+
+.image-right-arrow{
+    position: absolute;
+    top: 140px;
+    right: 10px;
+}
+
+.image-arrow {
+    box-shadow: 0px 0px 1px black;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.image-arrow:hover {
+    cursor: pointer;
+}
+
+.images-num-indicator {
+    height: 15px !important;
+    bottom: -20px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.images-num-indicator div {
+    border: 1px solid gray;
+    border-radius: 100%;
+    height: 5px;
+    width: 5px;
+}
+
+.images-num-indicator div.image-indicated {
+    background-color: gray;
 }
 
 /* Google icon settings. */
